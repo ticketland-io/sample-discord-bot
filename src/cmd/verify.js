@@ -1,14 +1,14 @@
 require('dotenv').config();
-const { SlashCommandBuilder } = require('discord.js');
+const {SlashCommandBuilder} = require('discord.js')
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('ping')
-		.setDescription('Replies with Pong!'),
+		.setName('verify')
+		.setDescription('Replies with Verification list'),
     
 	async execute(interaction) {
 		await interaction.reply({
-      content: `Command you requested help for does not exist!`,
+      content: 'Verify your pass https://ticketland.io/verify',
       ephemeral: true,
     });
 	},
